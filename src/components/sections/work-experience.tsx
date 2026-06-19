@@ -116,7 +116,7 @@ export function ExperienceItem({
 
 					<div className='w-full flex items-start justify-between'>
 						<div>
-							<h3 className='w-full text-base leading-snug font-medium flex items-center gap-1.5'>
+							<h3 className='w-full text-sm sm:text-base leading-snug font-medium flex items-center gap-1.5'>
 								{experience.positions[0].title}{' '}
 								<CollapsibleTrigger className='group/experience not-prose block text-left select-none'>
 									<div
@@ -159,7 +159,7 @@ export function ExperienceItem({
 							</p>
 						</div>
 
-						<span className='text-sm font-normal text-muted-foreground'>
+						<span className='text-xs sm:text-sm font-normal text-muted-foreground'>
 							{experience.positions[0].employmentPeriod}
 						</span>
 					</div>
