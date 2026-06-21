@@ -354,7 +354,7 @@ type LinkPreviewProps = {
 	className?: string
 }
 
-const LinkPreview: React.FC<LinkPreviewProps> = ({
+export const LinkPreview: React.FC<LinkPreviewProps> = ({
 	children,
 	url,
 	className,
@@ -377,5 +377,3 @@ const LinkPreview: React.FC<LinkPreviewProps> = ({
 		</HoverPeek>
 	)
 }
-
-export default LinkPreview

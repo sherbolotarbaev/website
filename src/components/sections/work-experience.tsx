@@ -16,9 +16,9 @@ import {
 	CollapsibleContent,
 	CollapsibleTrigger,
 } from 'ui/collapsible'
+import { LinkPreview } from 'ui/link-preview'
 
 import { cn } from 'utils'
-import LinkPreview from '../ui/link-preview'
 
 const iconMap = {
 	code: CodeXmlIcon,
@@ -27,58 +27,37 @@ const iconMap = {
 	education: GraduationCapIcon,
 } as const
 
-/**
- * Represents the valid keys of the `iconMap` object, used to specify the type of icon
- * associated with an experience position.
- */
 export type ExperiencePositionIconType = keyof typeof iconMap
 
 export type ExperiencePositionItemType = {
-	/** Unique identifier for the position */
 	id: string
-	/** The job title or position name */
 	title: string
-	/** The period during which the position was held (e.g., "Jan 2020 - Dec 2021") */
 	employmentPeriod: string
-	/** The type of employment (e.g., "Full-time", "Part-time", "Contract") */
 	employmentType?: string
-	/** A brief description of the position or responsibilities */
 	description?: string
-	/** An icon representing the position */
 	icon?: ExperiencePositionIconType
-	/** A list of skills associated with the position */
 	skills?: string[]
-	/** Indicates if the position details are expanded in the UI */
 	isExpanded?: boolean
 }
 
 export type ExperienceItemType = {
-	/** Unique identifier for the experience item */
 	id: string
-	/** Name of the company where the experience was gained */
 	companyName: string
-	/** Company Website */
 	companyWebsite?: string
-	/** Optional span for company */
 	span?: string
-	/** URL or path to the company's logo image */
 	companyLogo?: string
-	/** List of positions held at the company */
 	positions: ExperiencePositionItemType[]
-	/** Indicates if this is the user's current employer */
 	isCurrentEmployer?: boolean
 }
 
 export function WorkExperience({
-	className,
 	experiences,
 }: {
-	className?: string
 	experiences: ExperienceItemType[]
 }) {
 	return (
-		<div className={className}>
-			<h2 className='font-medium text-base'>Experience</h2>
+		<div className='w-full'>
+			<h2 className='font-medium text-lg'>Experience</h2>
 			{experiences.map(experience => (
 				<ExperienceItem key={experience.id} experience={experience} />
 			))}
@@ -167,7 +146,7 @@ export function ExperienceItem({
 
 				<CollapsibleContent className='overflow-hidden duration-300 data-[state=closed]:animate-collapsible-up data-[state=open]:animate-collapsible-down'>
 					{experience.positions[0].description && (
-						<Prose className='pt-4 pl-12 text-base leading-relaxed'>
+						<Prose className='pt-4 pl-12 text-[15px] sm:text-base leading-relaxed'>
 							<ReactMarkdown>
 								{experience.positions[0].description}
 							</ReactMarkdown>
@@ -226,7 +205,7 @@ export function ExperiencePositionItem({
 
 				<CollapsibleContent className='overflow-hidden duration-300 data-[state=closed]:animate-collapsible-up data-[state=open]:animate-collapsible-down'>
 					{position.description && (
-						<Prose className='pt-2 pl-9'>
+						<Prose className='pt-2 pl-9 text-[15px] sm:text-base'>
 							<ReactMarkdown>{position.description}</ReactMarkdown>
 						</Prose>
 					)}

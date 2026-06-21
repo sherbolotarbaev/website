@@ -1,5 +1,3 @@
-import { ChevronRight } from 'lucide-react'
-import { IconType } from 'react-icons'
 import {
 	BsGithub,
 	BsInstagram,
@@ -10,16 +8,13 @@ import {
 
 import { AnimatedTextCycle } from 'ui/animated-text-cycle'
 import { Avatar, AvatarImage } from 'ui/avatar'
-import { Button } from 'ui/button'
+
 import SectionBadge, { StarIcon } from 'ui/section-badge'
-import { type ExperienceItemType, WorkExperience } from './work-experience'
+import { Contact, type ContactItemType } from './contact'
+import { Education, type EducationItemType } from './education'
+import { WorkExperience, type ExperienceItemType } from './work-experience'
 
-interface ContactItem {
-	icon?: IconType
-	children: React.ReactNode
-}
-
-const contacts: ContactItem[] = [
+const contacts: ContactItemType[] = [
 	{
 		icon: BsGithub,
 		children: 'GitHub',
@@ -222,9 +217,24 @@ export const experiences: ExperienceItemType[] = [
 	},
 ]
 
+const educations: EducationItemType[] = [
+	{
+		id: 'iksu',
+		universityName: 'Issyk-Kul State University (IKSU)',
+		universityWebsite: 'https://www.iksu.kg',
+		degree: `Bachelor's degree`,
+		fieldOfStudy: 'Computer Science',
+		universityLogo:
+			'https://lh6.googleusercontent.com/proxy/X7CLjg0Z2ym_zLUgT12aXujd2Wh2hOX-mVz8z1pqbxpdu3-qZKSsnt32m7j8enrENurib10z1ZW6_gof0zzU6TCeNNqaUJFRpPhOVeVyhU1Evw',
+		description:
+			'Chairman of the Student Union; organized tech meetups and events. 2nd Place, Enactus Kyrgyzstan National Entrepreneurship Cup 2022 (20+ teams). Relevant Coursework: Data Structures and Algorithms, Systems Programming, Parallel and Distributed Processing, Machine Organization, Computer Design, Software Design, Computer Architecture',
+		period: 'Sep 2019 - May 2023',
+	},
+]
+
 export function HeroSection() {
 	return (
-		<div className='w-full max-w-md flex items-center justify-center'>
+		<div className='w-full max-w-xl flex items-center justify-center'>
 			<div className='w-full h-full flex flex-col gap-8'>
 				<SectionBadge
 					className='w-fit'
@@ -232,7 +242,7 @@ export function HeroSection() {
 					icon={<StarIcon fill='#008cff' />}
 				/>
 
-				<div className='flex items-start gap-3.5'>
+				<header className='flex items-start gap-3.5'>
 					<Avatar className='size-14 rounded-xl after:rounded-xl'>
 						<AvatarImage src='/images/sher.jpeg' className='rounded-xl' />
 					</Avatar>
@@ -249,46 +259,30 @@ export function HeroSection() {
 							/>
 						</p>
 					</div>
-				</div>
+				</header>
 
-				<p className='text-base leading-relaxed'>
-					Over the last 5+ years, I’ve moved from scaling FinTech/EdTech
-					backends to building AI-native products that actually change how
-					people work. My focus is simple: turn complex, messy ideas into fast,
-					reliable software. <br />
+				<p className='text-[15px] sm:text-base leading-relaxed [&>span]:bg-[#d1fe17] [&>span]:px-1 [&>span]:text-[13px] [&>span]:font-medium [&>span]:sm:text-sm [&>span]:text-primary-foreground [&>span]:inline-block [&>span]:-skew-x-12 [&>span]:rounded-sm'>
+					Over the last <span>5+ years</span>, I’ve moved from scaling{' '}
+					<span>FinTech/EdTech backends</span> to building{' '}
+					<span>AI-native products</span> that actually change how people work.
+					My focus is simple: <span>turn complex</span>, messy ideas{' '}
+					<span>into fast</span>, reliable software. <br />
 					<br />
-					I’m a builder at heart. I love the process, I love the speed, and I’m
-					always looking to make life a little more efficient through the
+					I’m a builder at heart. I love process, <span>I love speed</span>, and
+					I’m always looking <span>to make life a bit better</span> through the
 					products I create.
 				</p>
 
-				<WorkExperience experiences={experiences} className='w-full' />
+				<WorkExperience experiences={experiences} />
+				<Education educations={educations} />
+				<Contact contacts={contacts} />
 
-				<div className='flex flex-col gap-4'>
-					<h2 className='font-medium text-base'>Contact</h2>
-					<div className='flex flex-col'>
-						{contacts.map(({ ...props }, idx) => (
-							<ContactButton key={idx} {...props} />
-						))}
-					</div>
-				</div>
+				<footer className='w-full flex items-center justify-center'>
+					<p className='text- sm:text-sm text-muted-foreground'>
+						© 2026 Sher Arbaev. All rights reserved.
+					</p>
+				</footer>
 			</div>
 		</div>
-	)
-}
-
-type ContactButtonProps = React.ComponentProps<typeof Button> & ContactItem
-
-function ContactButton({ icon: Icon, children, ...props }: ContactButtonProps) {
-	return (
-		<Button
-			{...props}
-			size='lg'
-			variant='ghost'
-			className='w-full justify-start gap-3.5 h-14 px-0 rounded-none border-x-0 border-t-0 border-foreground/6 text-base text-muted-foreground first:border-t last:border-b hover:bg-transparent!'
-		>
-			{Icon ? <Icon /> : null} {children}{' '}
-			<ChevronRight className='ml-auto transition-transform duration-200 ease-in-out group-hover/button:translate-x-1' />
-		</Button>
 	)
 }
