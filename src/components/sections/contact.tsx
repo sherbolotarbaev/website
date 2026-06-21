@@ -5,6 +5,7 @@ import { Button } from 'ui/button'
 
 export type ContactItemType = {
 	icon?: IconType
+	href: string
 	children: React.ReactNode
 }
 

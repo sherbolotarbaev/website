@@ -18,22 +18,27 @@ const contacts: ContactItemType[] = [
 	{
 		icon: BsGithub,
 		children: 'GitHub',
+		href: 'https://github.com/sherbolotarbaev',
 	},
 	{
 		icon: BsLinkedin,
 		children: 'LinkedIn',
+		href: 'https://www.linkedin.com/in/sherbolotarbaev',
 	},
 	{
 		icon: BsTelegram,
 		children: 'Telegram',
+		href: 'https://t.me/sherbolotarbaev',
 	},
 	{
 		icon: BsInstagram,
 		children: 'Instagram',
+		href: 'https://instagram.com/sherbolotarbaev',
 	},
 	{
 		icon: BsTwitterX,
 		children: 'X',
+		href: 'https://x.com/sherbolotarbaev',
 	},
 ]
 
