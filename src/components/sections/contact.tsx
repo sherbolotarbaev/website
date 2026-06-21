@@ -30,6 +30,7 @@ function ContactButton({ icon: Icon, children, ...props }: ContactButtonProps) {
 			{...props}
 			size='lg'
 			variant='ghost'
+			target='_blank'
 			className='w-full justify-start gap-3.5 h-14 px-0 rounded-none border-x-0 border-t-0 border-foreground/6 text-base text-muted-foreground first:border-t last:border-b hover:bg-transparent!'
 		>
 			{Icon ? <Icon /> : null} {children}{' '}
