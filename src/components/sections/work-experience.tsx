@@ -1,6 +1,7 @@
 import {
 	BriefcaseBusinessIcon,
 	ChevronDown,
+	ChevronRight,
 	ChevronUp,
 	CodeXmlIcon,
 	DraftingCompassIcon,
@@ -108,7 +109,7 @@ export function ExperienceItem({
 										aria-hidden
 									>
 										<ChevronDown className='hidden group-data-[state=open]/experience:block' />
-										<ChevronUp className='hidden group-data-[state=closed]/experience:block' />
+										<ChevronRight className='hidden group-data-[state=closed]/experience:block' />
 									</div>
 								</h3>
 							</CollapsibleTrigger>
@@ -146,7 +147,7 @@ export function ExperienceItem({
 
 				<CollapsibleContent className='overflow-hidden duration-300 data-[state=closed]:animate-collapsible-up data-[state=open]:animate-collapsible-down'>
 					{experience.positions[0].description && (
-						<Prose className='pt-4 pl-12 text-[15px] sm:text-base leading-relaxed'>
+						<Prose className='pt-4 pl-12 text-[15px] sm:text-base text-balance leading-relaxed'>
 							<ReactMarkdown>
 								{experience.positions[0].description}
 							</ReactMarkdown>

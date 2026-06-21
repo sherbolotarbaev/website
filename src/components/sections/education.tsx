@@ -47,7 +47,7 @@ export function EducationItem({ education }: { education: EducationItemType }) {
 				</div>
 
 				<div className='w-full flex items-start flex-col sm:flex-row gap-1 justify-between'>
-					<h3 className='w-full text-base text-balance leading-snug font-medium '>
+					<h3 className='w-full text-base text-balance leading-snug font-medium'>
 						{education.universityName} {education.degree} in{' '}
 						{education.fieldOfStudy}
 					</h3>
@@ -59,7 +59,7 @@ export function EducationItem({ education }: { education: EducationItemType }) {
 			</div>
 
 			{education.description && (
-				<div className='pt-4 pl-12 text-[15px] sm:text-base text-muted-foreground leading-relaxed'>
+				<div className='pt-4 pl-12 text-[15px] sm:text-base text-muted-foreground text-balance leading-relaxed'>
 					<ReactMarkdown>{education.description}</ReactMarkdown>
 				</div>
 			)}
