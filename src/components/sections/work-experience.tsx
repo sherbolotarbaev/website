@@ -73,9 +73,9 @@ export function ExperienceItem({
 	return (
 		<div className='w-full flex flex-col gap-4 py-4'>
 			<Collapsible>
-				<div className='w-full not-prose flex items-center gap-3'>
+				<div className='w-full not-prose flex items-start gap-3'>
 					<div
-						className='flex size-9 shrink-0 items-center justify-center'
+						className='flex size-9 pt-2 shrink-0 items-center justify-center'
 						aria-hidden
 					>
 						{experience.companyLogo ? (
@@ -93,10 +93,10 @@ export function ExperienceItem({
 						)}
 					</div>
 
-					<div className='w-full flex items-start justify-between'>
+					<div className='w-full flex flex-col gap-1 sm:flex-row items-start justify-between'>
 						<div>
-							<CollapsibleTrigger className='group/experience not-prose block text-left select-none'>
-								<h3 className='w-full text-base leading-snug font-medium flex items-center gap-1.5'>
+							<CollapsibleTrigger className='w-full group/experience not-prose block text-left select-none'>
+								<h3 className='w-full text-balance text-base leading-snug font-medium flex items-center gap-1.5'>
 									{experience.positions[0].title}{' '}
 									<div
 										className={cn(
@@ -138,7 +138,7 @@ export function ExperienceItem({
 							</p>
 						</div>
 
-						<span className='text-xs sm:text-sm font-normal text-muted-foreground'>
+						<span className='text-[13px] sm:text-sm font-normal text-muted-foreground'>
 							{experience.positions[0].employmentPeriod}
 						</span>
 					</div>

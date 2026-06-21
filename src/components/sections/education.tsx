@@ -46,13 +46,13 @@ export function EducationItem({ education }: { education: EducationItemType }) {
 					)}
 				</div>
 
-				<div className='w-full flex items-start justify-between'>
-					<h3 className='w-full text-base leading-snug font-medium '>
+				<div className='w-full flex items-start flex-col sm:flex-row gap-1 justify-between'>
+					<h3 className='w-full text-base text-balance leading-snug font-medium '>
 						{education.universityName} {education.degree} in{' '}
 						{education.fieldOfStudy}
 					</h3>
 
-					<span className='text-xs sm:text-sm font-normal text-muted-foreground whitespace-nowrap ml-4'>
+					<span className='text-[13px] sm:text-sm font-normal text-muted-foreground whitespace-nowrap sm:ml-4'>
 						{education.period}
 					</span>
 				</div>
