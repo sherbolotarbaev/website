@@ -11,6 +11,7 @@ import {
 import { AnimatedTextCycle } from 'ui/animated-text-cycle'
 import { Avatar, AvatarImage } from 'ui/avatar'
 import { Button } from 'ui/button'
+import SectionBadge, { StarIcon } from 'ui/section-badge'
 import { type ExperienceItemType, WorkExperience } from './work-experience'
 
 interface ContactItem {
@@ -55,7 +56,7 @@ export const experiences: ExperienceItemType[] = [
 				title: 'Founding AI Engineer',
 				employmentPeriod: 'Jun 2025 – Jun 2026',
 				description:
-					'I built the next generation of **AI-driven recruitment tools**, including an autonomous pipeline from resume scanning to technical and soft-skill interviews that reduced recruiter screening time by **60-70%**. I developed **share.peopleup.ai**, an end-to-end assessment platform that leverages LLMs, LangChain, and vector databases to ingest interview transcripts and video data, providing deep-dive performance insights. My technical focus included architecting a multi-instance API integration layer with AES-256-CBC encryption and concurrent request deduplication, alongside a real-time webhook ingestion system using RabbitMQ and Bun on Google Cloud Run to ensure guaranteed delivery and graceful shutdowns. I also designed a claim synchronization engine using Prisma ORM, implemented a document processing pipeline with **Google Document AI**, and built a real-time claims dashboard using Next.js and Server-Sent Events (SSE). Beyond the product, I maintained a high bar for engineering excellence by conducting senior-level system design interviews in collaboration with top-tier engineers from **Google** and **AWS**.',
+					'I built the next generation of **AI-driven recruitment tools**, including an autonomous pipeline from resume scanning to technical and soft-skill interviews that reduced recruiter screening time by **60-70%**. I developed **share.peopleup.ai**, an end-to-end assessment platform that leverages **LLMs**, **LangChain**, and **vector databases** to ingest interview transcripts and video data, providing deep-dive performance insights. My technical focus included architecting a multi-instance API integration layer with **AES-256-CBC** encryption and concurrent request deduplication, alongside a real-time webhook ingestion system using **RabbitMQ** and **Bun** on **Google Cloud Run** to ensure guaranteed delivery and graceful shutdowns. I also designed a claim synchronization engine using Prisma ORM, implemented a document processing pipeline with **Google Document AI**, and built a real-time claims dashboard using Next.js and Server-Sent Events (SSE). Beyond the product, I maintained a high bar for engineering excellence by conducting senior-level system design interviews in collaboration with top-tier engineers from **Google** and **AWS**.',
 				employmentType: 'Full-time',
 				icon: 'code',
 				skills: [
@@ -203,7 +204,7 @@ export const experiences: ExperienceItemType[] = [
 				id: 'mancho-frontend',
 				title: 'Frontend Developer',
 				description:
-					'Mancho is a **tech studio** founded with a clear mission: to make life in Kyrgyzstan a little more fair by building high-impact, accessible digital solutions. During my time there, I evolved from a frontend intern to a full-stack engineer, playing a key role in bringing MedTech and FinTech services to underserved regions.',
+					'Mancho is a **tech studio** founded with a clear mission: to make life in **Kyrgyzstan** a little more fair by building high-impact, accessible digital solutions. During my time there, I evolved from a frontend intern to a full-stack engineer, playing a key role in bringing **MedTech** and **FinTech** services to underserved regions.',
 				employmentPeriod: 'Aug 2021 – Sep 2022',
 				employmentType: 'Full-time',
 				icon: 'code',
@@ -225,13 +226,19 @@ export function HeroSection() {
 	return (
 		<div className='w-full max-w-md flex items-center justify-center'>
 			<div className='w-full h-full flex flex-col gap-8'>
+				<SectionBadge
+					className='w-fit'
+					text='Open to New Opportunities'
+					icon={<StarIcon fill='#008cff' />}
+				/>
+
 				<div className='flex items-start gap-3.5'>
 					<Avatar className='size-14 rounded-xl after:rounded-xl'>
 						<AvatarImage src='/images/sher.jpeg' className='rounded-xl' />
 					</Avatar>
 
 					<div className='flex flex-col gap-0.5'>
-						<h2 className='text-xl leading-none font-medium'>Sher Arbaev</h2>
+						<h2 className='text-xl leading-none font-medium'>Sher Arbaev </h2>
 						<p className='text-base leading-relaxed text-muted-foreground/80'>
 							<AnimatedTextCycle
 								words={[
@@ -244,7 +251,7 @@ export function HeroSection() {
 					</div>
 				</div>
 
-				<p>
+				<p className='text-base leading-relaxed'>
 					Over the last 5+ years, I’ve moved from scaling FinTech/EdTech
 					backends to building AI-native products that actually change how
 					people work. My focus is simple: turn complex, messy ideas into fast,

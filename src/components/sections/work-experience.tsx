@@ -116,9 +116,9 @@ export function ExperienceItem({
 
 					<div className='w-full flex items-start justify-between'>
 						<div>
-							<h3 className='w-full text-sm sm:text-base leading-snug font-medium flex items-center gap-1.5'>
-								{experience.positions[0].title}{' '}
-								<CollapsibleTrigger className='group/experience not-prose block text-left select-none'>
+							<CollapsibleTrigger className='group/experience not-prose block text-left select-none'>
+								<h3 className='w-full text-base leading-snug font-medium flex items-center gap-1.5'>
+									{experience.positions[0].title}{' '}
 									<div
 										className={cn(
 											'shrink-0 text-muted-foreground [&_svg]:size-4 group-hover/experience:text-foreground',
@@ -131,8 +131,8 @@ export function ExperienceItem({
 										<ChevronDown className='hidden group-data-[state=open]/experience:block' />
 										<ChevronUp className='hidden group-data-[state=closed]/experience:block' />
 									</div>
-								</CollapsibleTrigger>
-							</h3>
+								</h3>
+							</CollapsibleTrigger>
 							<p className='text-sm'>
 								{experience.companyWebsite ? (
 									<LinkPreview
@@ -167,7 +167,7 @@ export function ExperienceItem({
 
 				<CollapsibleContent className='overflow-hidden duration-300 data-[state=closed]:animate-collapsible-up data-[state=open]:animate-collapsible-down'>
 					{experience.positions[0].description && (
-						<Prose className='pt-4 pl-12 text-sm sm:text-base'>
+						<Prose className='pt-4 pl-12 text-base leading-relaxed'>
 							<ReactMarkdown>
 								{experience.positions[0].description}
 							</ReactMarkdown>
