@@ -278,7 +278,7 @@ export function HeroSection() {
 				<Contact contacts={contacts} />
 
 				<footer className='w-full flex items-center justify-center'>
-					<p className='text- sm:text-sm text-muted-foreground'>
+					<p className='text-xs sm:text-sm text-muted-foreground'>
 						© 2026 Sher Arbaev. All rights reserved.
 					</p>
 				</footer>
