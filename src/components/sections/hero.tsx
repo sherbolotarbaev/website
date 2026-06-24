@@ -86,7 +86,7 @@ export const experiences: ExperienceItemType[] = [
 				title: 'Senior Software Engineer',
 				description:
 					'wedevx is an **AI-powered Ed-Tech platform**, backed by **Antler** and **Beta Boom**, that helps engineers land high-paying roles through hands-on, AI-native learning experiences. Led the architectural redesign and modernization of the learning platform (migrating from **Next.js** 13 to 15 and adopting shadcn/ui) to deliver a high-performance user experience. Re-architected core backend pipelines and **Prisma** query structures, slashing heavy processing times from **7 minutes to ~7 seconds for 30K+ active users**. Built the new AI-native learning product, integrating real-time agents to create a **ChatGPT-style personalized learning experience**. Designed cloud-based workstations enabling students to interact with live **AWS terminals** and **Linux environments** directly in their browser.',
-				employmentPeriod: 'May 2025 - Jun 2026',
+				employmentPeriod: 'May 2023 - Jun 2026',
 				employmentType: 'Full-time',
 				icon: 'code',
 			},
