@@ -47,8 +47,7 @@ export const experiences: ExperienceItemType[] = [
 	{
 		id: 'peopleup',
 		companyName: 'PeopleUp',
-		companyLogo:
-			'https://media.licdn.com/dms/image/v2/D560BAQG3Au1LaZjulw/company-logo_200_200/B56ZcYPnmoG0AU-/0/1748458438073/peopleup_ai_logo?e=1783555200&v=beta&t=79DrcCJHyLgs2xrz8oipZBFHepqbaa_IXE1j6r_NDxI',
+		companyLogo: '/images/peopleup_ai_logo.jpeg',
 		companyWebsite: 'https://www.peopleup.ai',
 		span: 'by wedevx',
 		positions: [
@@ -78,8 +77,7 @@ export const experiences: ExperienceItemType[] = [
 		id: 'wedevx',
 		companyName: 'wedevx',
 		companyWebsite: 'https://wedevx.co',
-		companyLogo:
-			'https://s3-eu-west-1.amazonaws.com/tpd/logos/649d18d3cc7acb3708c81d3a/0x0.png',
+		companyLogo: '/images/wedevx_logo.png',
 		positions: [
 			{
 				id: 'wedevx-lead',
@@ -140,8 +138,7 @@ export const experiences: ExperienceItemType[] = [
 		id: 'finik',
 		companyName: 'Finik (QUICKPAY)',
 		companyWebsite: 'https://finik.kg',
-		companyLogo:
-			'https://www.finik.kg/downloads/finik-logos/symbols/finik-black-symbol-bg-1080.png',
+		companyLogo: '/images/finik_kg_logo.png',
 		span: 'by Mancho',
 		positions: [
 			{
@@ -169,8 +166,7 @@ export const experiences: ExperienceItemType[] = [
 		id: 'medchek',
 		companyName: 'medchek',
 		companyWebsite: 'https://medcheck.kg',
-		companyLogo:
-			'https://play-lh.googleusercontent.com/UF-DZ83xCQPbgZdfwOsJD9DeR9bHFdIkpnW-ECzA1TftOUfXuc6LOWOp_8QFj0AuM5rBckJLDv_1jRtGbu3c=w480-h960-rw',
+		companyLogo: '/images/medchek_kg_logo.webp',
 		span: 'by Mancho',
 		positions: [
 			{
@@ -198,8 +194,7 @@ export const experiences: ExperienceItemType[] = [
 		id: 'mancho',
 		companyName: 'Mancho',
 		companyWebsite: 'https://mancho.dev',
-		companyLogo:
-			'https://media.licdn.com/dms/image/v2/C4E0BAQHCsohtw5k0Qw/company-logo_200_200/company-logo_200_200/0/1630627568617?e=1783555200&v=beta&t=NQfnamJMazuo5s8pnRUZHw3Hecys3m_aaF-H9fwr6JU',
+		companyLogo: '/images/mancho_dev_logo.jpeg',
 		positions: [
 			{
 				id: 'mancho-frontend',
@@ -230,8 +225,7 @@ const educations: EducationItemType[] = [
 		universityWebsite: 'https://www.iksu.kg',
 		degree: `Bachelor's degree`,
 		fieldOfStudy: 'Computer Science',
-		universityLogo:
-			'https://lh6.googleusercontent.com/proxy/X7CLjg0Z2ym_zLUgT12aXujd2Wh2hOX-mVz8z1pqbxpdu3-qZKSsnt32m7j8enrENurib10z1ZW6_gof0zzU6TCeNNqaUJFRpPhOVeVyhU1Evw',
+		universityLogo: '/images/iksu_kg_logo.png',
 		description:
 			'Chairman of the Student Union; organized tech meetups and events. 2nd Place, Enactus Kyrgyzstan National Entrepreneurship Cup 2022 (20+ teams). Relevant Coursework: Data Structures and Algorithms, Systems Programming, Parallel and Distributed Processing, Machine Organization, Computer Design, Software Design, Computer Architecture',
 		period: 'Sep 2019 - May 2023',
@@ -255,7 +249,7 @@ export function HeroSection() {
 
 					<div className='flex flex-col gap-0.5'>
 						<h2 className='text-xl leading-none font-medium'>Sher Arbaev </h2>
-						<p className='text-base leading-relaxed text-muted-foreground/80'>
+						<div className='text-base leading-relaxed text-muted-foreground/80'>
 							<AnimatedTextCycle
 								words={[
 									'Software Engineer',
@@ -263,7 +257,7 @@ export function HeroSection() {
 									'Full-Stack Developer',
 								]}
 							/>
-						</p>
+						</div>
 					</div>
 				</header>
 

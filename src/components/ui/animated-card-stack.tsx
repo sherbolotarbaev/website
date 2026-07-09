@@ -61,7 +61,7 @@ export function CardContent({ contentType }: { contentType: 1 | 2 | 3 }) {
 
 	return (
 		<div className='flex h-full w-full flex-col gap-4'>
-			<div className='-outline-offset-1 flex h-[200px] w-full items-center justify-center overflow-hidden rounded-xl outline outline-black/10 dark:outline-white/10'>
+			<div className='-outline-offset-1 flex h-[200px] w-full items-center justify-center overflow-hidden rounded-3xl outline outline-black/10 dark:outline-white/10'>
 				<img
 					src={data.image || '/placeholder.svg'}
 					alt={data.title}
@@ -116,7 +116,7 @@ export function AnimatedCard({
 				x: '-50%',
 				bottom: 0,
 			}}
-			className='absolute flex h-[280px] w-[324px] items-center justify-center overflow-hidden rounded-t-xl border-x border-t border-border bg-card p-1 shadow-lg will-change-transform sm:w-[512px]'
+			className='absolute flex h-[280px] w-[324px] items-center justify-center overflow-hidden rounded-t-3xl border-x border-t border-border bg-card p-1 shadow-lg will-change-transform sm:w-[512px]'
 		>
 			<CardContent contentType={card.contentType} />
 		</motion.div>
