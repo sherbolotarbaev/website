@@ -11,13 +11,13 @@ const Dithering = lazy(() =>
 
 export default function Home() {
 	return (
-		<div className='dark:bg-[#151515] flex min-h-screen items-center justify-center bg-background'>
-			<main className='relative flex min-h-screen w-full flex-col items-center px-2 py-8 justify-center overflow-hidden'>
-				<Suspense fallback={<div className='absolute inset-0 bg-muted/20' />}>
-					<div className='absolute inset-0 z-0 pointer-events-none opacity-40 dark:opacity-30 mix-blend-multiply dark:mix-blend-screen'>
+		<div className='dark:bg-[#151515] flex min-h-screen items-center justify-center overflow-x-hidden bg-background'>
+			<main className='relative flex min-h-screen w-full max-w-full flex-col items-center justify-center overflow-x-hidden px-2 py-8'>
+				<Suspense fallback={<div className='absolute inset-0 z-0 bg-muted/20' />}>
+					<div className='pointer-events-none absolute inset-0 z-0'>
 						<Dithering
 							colorBack='#00000000'
-							colorFront='#ccff00'
+							colorFront='#d0fe177d'
 							shape='warp'
 							type='4x4'
 							speed={0.2}
@@ -26,7 +26,7 @@ export default function Home() {
 						/>
 					</div>
 				</Suspense>
-				<div className='relative z-10'>
+				<div className='relative z-10 w-full min-w-0 max-w-xl'>
 					<HeroSection />
 				</div>
 			</main>

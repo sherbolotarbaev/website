@@ -234,7 +234,7 @@ const educations: EducationItemType[] = [
 
 export function HeroSection() {
 	return (
-		<div className='relative w-full max-w-xl flex items-center justify-center rounded-4xl backdrop-blur-sm bg-background/80 p-4'>
+		<div className='relative box-border w-full min-w-0 max-w-xl overflow-x-clip rounded-4xl bg-background/80 p-4 backdrop-blur-sm'>
 			<div className='w-full h-full flex flex-col gap-8'>
 				<SectionBadge
 					className='w-fit'

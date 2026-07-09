@@ -116,7 +116,7 @@ export function AnimatedCard({
 				x: '-50%',
 				bottom: 0,
 			}}
-			className='absolute flex h-[280px] w-[324px] items-center justify-center overflow-hidden rounded-t-3xl border-x border-t border-border bg-card p-1 shadow-lg will-change-transform sm:w-[512px]'
+			className='absolute flex h-[280px] w-full max-w-[324px] items-center justify-center overflow-hidden rounded-t-3xl border-x border-t border-border bg-card p-1 shadow-lg will-change-transform sm:max-w-[512px]'
 		>
 			<CardContent contentType={card.contentType} />
 		</motion.div>
@@ -139,8 +139,8 @@ export function AnimatedCardStack() {
 	}
 
 	return (
-		<div className='flex w-full flex-col items-center justify-center'>
-			<div className='relative h-[380px] w-full overflow-hidden'>
+		<div className='flex w-full min-w-0 flex-col items-center justify-center'>
+			<div className='relative h-[380px] w-full min-w-0 overflow-hidden'>
 				<h2 className='font-medium text-lg'>Useful links</h2>
 				<AnimatePresence initial={false}>
 					{cards.slice(0, 3).map((card, index) => (
